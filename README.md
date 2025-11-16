@@ -1,212 +1,202 @@
-📘 Projeto de Software – Sistema de E-Commerce de Suplementos
+# 📘 Projeto de Software – Sistema de E-Commerce de Suplementos
 
-Este repositório apresenta a modelagem completa de um sistema de e-commerce de suplementos, desenvolvido para a disciplina Projeto de Software.
-Inclui todos os artefatos exigidos no processo de análise e design, seguindo padrões UML.
+Este repositório apresenta a modelagem completa de um sistema de e-commerce de suplementos, desenvolvido para a disciplina **Projeto de Software**.  
+Inclui todos os artefatos exigidos no processo de análise e design, seguindo padrões **UML**.
 
-📑 Sumário
+---
 
-Descrição Geral
+## 📑 Sumário
+- [Descrição Geral](#-descrição-geral)
+- [Escopo do Sistema](#-escopo-do-sistema)
+- [Casos de Uso](#-casos-de-uso)
+- [Diagramas UML](#-diagramas-uml)
+  - [Diagrama de Casos de Uso](#-diagrama-de-casos-de-uso)
+  - [Diagrama de Classes](#-diagrama-de-classes)
+  - [Diagramas de Sequência](#-diagramas-de-sequência)
+  - [Diagramas de Comunicação](#-diagramas-de-comunicação)
+  - [Diagramas de Estados](#-diagramas-de-estados)
+  - [Diagrama de Componentes](#-diagrama-de-componentes)
+  - [Diagrama de Implantação](#-diagrama-de-implantação)
+- [Modelo de Dados](#-modelo-de-dados-der)
+- [Mapeamento Objeto–Relacional](#-estratégias-de-mapeamento-objeto–relacional)
+- [Tecnologias Sugeridas](#-tecnologias-sugeridas)
+- [Autor](#-autor)
 
-Escopo do Sistema
+---
 
-Casos de Uso
+## 🧾 Descrição Geral
 
-Diagramas UML
+O sistema modelado representa um **e-commerce de suplementos**, permitindo que clientes:
 
-Diagrama de Casos de Uso
+- realizem compras online,
+- acompanhem pedidos,
+- gerenciem suas contas.
 
-Diagrama de Classes
-
-Diagramas de Sequência
-
-Diagramas de Comunicação
-
-Diagramas de Estados
-
-Diagramas de Componentes
-
-Diagrama de Implantação
-
-Modelo de Dados (DER)
-
-Estratégias de Mapeamento Objeto–Relacional
-
-Tecnologias Sugeridas
-
-Autores
-
-🧾 Descrição Geral
-
-O sistema modelado representa um e-commerce de suplementos, permitindo que clientes realizem compras online, acompanhem pedidos e gerenciem suas contas.
 Administradores podem controlar produtos, usuários e pedidos.
 
-A modelagem segue os princípios de análise orientada a objetos, utilizando UML como linguagem padrão.
+A modelagem segue princípios de análise orientada a objetos, utilizando **UML** como linguagem padrão.
 
-🎯 Escopo do Sistema
+---
 
-O sistema oferece suporte às seguintes funcionalidades:
+## 🎯 Escopo do Sistema
 
-👤 Cliente
+### 👤 Cliente
+- Criar conta  
+- Editar/Excluir conta  
+- Realizar compras  
+- Acompanhar status dos pedidos  
 
-Criar conta
+### 🛠️ Administrador
+- Gerenciar produtos  
+- Gerenciar pedidos  
+- Gerenciar usuários  
 
-Editar/Excluir conta
+---
 
-Realizar compras
+## 📁 Casos de Uso
 
-Acompanhar status dos pedidos
+| ID | Caso de Uso | Atores | Descrição |
+|----|--------------|--------|-----------|
+| UC-01 | Finalizar Compra | Cliente | Concluir a compra de suplementos. |
+| UC-02 | Acompanhar Pedido | Cliente | Consultar andamento da entrega. |
+| UC-03 | Gerenciar Conta | Cliente/Admin | Criação, edição e exclusão de conta. |
+| UC-03.1 | Criar Conta | Usuário | Criar uma nova conta. |
+| UC-03.2 | Editar Conta | Usuário | Editar dados pessoais. |
+| UC-03.3 | Excluir Conta | Usuário | Remover conta definitivamente. |
+| UC-04 | Gerenciar Pedidos | Admin | Atualizar status, cancelar e visualizar pedidos. |
+| UC-05 | Gerenciar Produtos | Admin | Incluir, remover e editar produtos. |
 
-🛠️ Administrador
+---
 
-Gerenciar produtos
+## 🧩 Diagramas UML
 
-Gerenciar pedidos
+### 📌 Diagrama de Casos de Uso
+Representa as interações entre usuários e funcionalidades do sistema.  
+📁 `/diagrams/usecase/`
 
-Gerenciar usuários
+---
 
-📁 Casos de Uso
+### 📌 Diagrama de Classes
+Modelo estrutural representado com PlantUML.  
+📁 `/diagrams/class/`
 
-A seguir, os principais casos de uso definidos:
+---
 
-ID	Caso de Uso	Atores	Descrição
-UC-01	Finalizar Compra	Cliente	Concluir a compra de suplementos.
-UC-02	Acompanhar Pedido	Cliente	Ver o andamento e status da entrega.
-UC-03	Gerenciar Conta	Cliente/Admin	Agrupa criação, edição e exclusão de conta.
-UC-03.1	Criar Conta	Usuário	Criar uma nova conta.
-UC-03.2	Editar Conta	Usuário	Editar dados pessoais.
-UC-03.3	Excluir Conta	Usuário	Remover conta definitivamente.
-UC-04	Gerenciar Pedidos	Admin	Alterar status, cancelar e visualizar pedidos.
-UC-05	Gerenciar Produtos	Admin	Incluir, remover e editar produtos.
-🧩 Diagramas UML
+### 📌 Diagramas de Sequência
+Diagramas disponíveis:
 
-A seguir, a lista dos diagramas produzidos no exercício.
+- Cliente finaliza compra  
+- Cliente faz login  
+- Admin gerencia produtos  
+- Admin administra usuários  
+- Cliente acompanha pedido  
 
-📌 Diagrama de Casos de Uso
+📁 `/diagrams/sequence/`
 
-Representa as interações entre usuários e funcionalidades do sistema.
+---
 
-(Diagramas incluídos no repositório em /diagrams/usecase/)
+### 📌 Diagramas de Comunicação
+Fluxos representados:
 
-📌 Diagrama de Classes
+- Cliente faz pedido  
+- Cliente faz login  
+- Admin gerencia usuários  
 
-Modelo estrutural com associações, atributos e operações relevantes.
+📁 `/diagrams/communication/`
 
-(Gerado com PlantUML — incluído em /diagrams/class/)
+---
 
-📌 Diagramas de Sequência
+### 📌 Diagramas de Estados
+Estados representados:
 
-Diagramas criados:
+- **Pedido:** Criado → Pago → Enviado → Entregue / Cancelado  
+- **Conta do usuário**
 
-Cliente finaliza compra
+📁 `/diagrams/state/`
 
-Cliente faz login
+---
 
-Admin gerencia produtos
+### 📌 Diagrama de Componentes
+Representa:
 
-Admin administra usuários
+- Frontend  
+- API Backend  
+- Banco de Dados  
 
-Cliente acompanha pedido
+📁 `/diagrams/component/`
 
-Cada um mostra o fluxo temporal das mensagens entre objetos.
+---
 
-(Disponíveis em /diagrams/sequence/)
+### 📌 Diagrama de Implantação
+Mostra os ambientes onde o sistema é executado:
 
-📌 Diagramas de Comunicação
+- Servidor Frontend  
+- Servidor Backend  
+- Banco de Dados  
 
-Todos os fluxos:
+📁 `/diagrams/deployment/`
 
-Cliente faz pedido
+---
 
-Cliente faz login
+## 📌 Modelo de Dados (DER)
+Modelo contendo:
 
-Admin gerencia usuários
+- Usuário  
+- Produto  
+- Pedido  
+- Item_Pedido  
+- Pagamento  
 
-(Código PlantUML disponível em /diagrams/communication/)
+Com relacionamentos e cardinalidades.  
+📁 `/diagrams/database/modelo_dados.puml`
 
-📌 Diagramas de Estados
+---
 
-Estados principais de:
+## 🔄 Estratégias de Mapeamento Objeto–Relacional
 
-Pedido (Criado → Pago → Enviado → Entregue / Cancelado)
+| Classe      | Tabela        | Mapeamento |
+|-------------|---------------|------------|
+| Usuario     | usuario       | 1:1 direto |
+| Produto     | produto       | 1:1 direto |
+| Pedido      | pedido        | FK para usuário |
+| ItemPedido  | item_pedido   | Tabela associativa Pedido × Produto |
+| Pagamento   | pagamento     | 1:1 com Pedido |
 
-Conta de usuário
+**Padrões aplicados:**
+- FK para associações **1:N**  
+- Tabela intermediária para composição de itens  
+- Enum para tipo de usuário  
+- Normalização **3FN**
 
-(Arquivos em /diagrams/state/)
+---
 
-📌 Diagrama de Componentes
+## 🛠️ Tecnologias Sugeridas
 
-Mostra a organização dos módulos lógicos:
+Embora o projeto seja de modelagem, uma implementação poderia usar:
 
-Frontend Web
+### Backend
+- Node.js  
+- Spring Boot  
+- Laravel  
 
-API Backend (Controllers + Services + Repositories)
+### Frontend
+- React  
+- HTML/CSS/Bootstrap  
 
-Banco de Dados
+### Banco de Dados
+- PostgreSQL  
+- MySQL  
 
-(Arquivo em /diagrams/component/)
+### UML
+- PlantUML  
+- Draw.io  
 
-📌 Diagrama de Implantação
+---
 
-Mostra onde o sistema é executado:
+## 👨‍💻 Autor
 
-Servidor Frontend (Navegador)
+**Thomas Ramos**  
+PUC Minas — Engenharia de Software  
+Disciplina: Projeto de Software  
 
-Servidor Backend
-
-Banco de Dados
-
-(Arquivo em /diagrams/deployment/)
-
-📌 Modelo de Dados (DER – PlantUML)
-
-Inclui:
-
-Usuário
-
-Produto
-
-Pedido
-
-Item_Pedido
-
-Pagamento
-
-Com todos os relacionamentos e cardinalidades.
-
-(Arquivo em /diagrams/database/modelo_dados.puml)
-
-🔄 Estratégias de Mapeamento Objeto–Relacional
-Classe	Tabela	Mapeamento
-Usuario	usuario	1:1 direto
-Produto	produto	1:1 direto
-Pedido	pedido	FK para usuário
-ItemPedido	item_pedido	Tabela associativa Pedido × Produto
-Pagamento	pagamento	1:1 com Pedido
-
-Padrões aplicados:
-
-FK para representar associações 1:N
-
-Tabela intermediária para composição de itens
-
-Enum para tipo de usuário
-
-Normalização 3FN
-
-🛠️ Tecnologias Sugeridas
-
-Embora o projeto seja de modelagem, uma implementação possível incluiria:
-
-Backend: Node.js, Spring Boot ou Laravel
-
-Frontend: React, HTML/CSS/Bootstrap
-
-Banco: PostgreSQL ou MySQL
-
-UML: PlantUML + Draw.io
-
-👨‍💻 Autor
-
-Thomas Ramos
-PUC Minas — Engenharia de Software
-Disciplina: Projeto de Software# Documentacao-projeto-de-software
+---
